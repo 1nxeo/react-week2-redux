@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { plusOne } from "./redux/modules/counter";
+import { addNumber, minusNumber, plusOne } from "./redux/modules/counter";
 import { minusOne } from "./redux/modules/counter";
 import { plusN } from "./redux/modules/counter";
 import { minusN } from "./redux/modules/counter";
@@ -44,7 +44,7 @@ function App() {
           // +1을 해주는 로직을 써주면 된다.
           // dispatch({ type: PLUS_ONE });
           // dispatch(plusOne());
-          dispatch(plusN(number));
+          dispatch(addNumber(number));
         }}
       >
         +
@@ -53,7 +53,7 @@ function App() {
         onClick={() => {
           // dispatch({ type: MINUS_ONE });
           // dispatch(minusOne());
-          dispatch(minusN(number));
+          dispatch(minusNumber(number));
         }}
       >
         -
